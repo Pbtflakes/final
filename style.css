@@ -67,7 +67,7 @@
 
   ul.nav li {
     display: inline-block;
-    border: 1px solid red;
+    border: 1px solid #ce1126;
   }
 
   ul.nav li a {

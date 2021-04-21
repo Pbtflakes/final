@@ -5,14 +5,16 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/png" href="bauhaus.png">
     <title>Bauhaus History</title>
-    <!--
-    <script type="text/javascript" src="about.js"></script>
-    -->
+    <script type="text/javascript" src="weather.js"></script>
   </head>
   <body>
     <div class=mainbox>
       <?php include "header.php" ?>
       <main>
+        <h2>Weather report</h2>
+        <div id="wxdiv">
+          <p id="wxreport"></p>
+        </div>
         <h2>Contact</h2>
         <p>
         If you would like to contact me regarding the content of
