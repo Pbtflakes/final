@@ -13,7 +13,7 @@
       <main>
         <h2>Weather report</h2>
         <div id="wxdiv">
-          <p id="wxreport"></p>
+          <p id="wxreport">Loading...</p>
         </div>
         <h2>Contact</h2>
         <p>
