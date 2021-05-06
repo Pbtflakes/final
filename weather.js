@@ -1,6 +1,8 @@
 "use strict";
 const wxLocation = "https://api.weather.gov/stations/KBED/observations/latest";
 
+/* We send our asynchronous weather function off to do its work, changing
+the DOM when it's done. */
 window.onload = () => {
 	processWX();
 }
@@ -33,6 +35,7 @@ async function fetchAsync(url) {
 			return result;
 		}
 	}).catch(function(e) {
+		/* Catch any errors internal to the Fetch API */
 		console.log('Fetch error :-S', e)
 	});
 	/* Extract the JSON contents of the Promise */
