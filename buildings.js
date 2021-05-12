@@ -39,7 +39,9 @@ function loadBuilding(e) {
 	var targetStyle = buildingList[target].style.display;
 	if (targetStyle == 'none' || targetStyle == '') {
 		buildingList[target].style.display = 'block';
+		buildingList[target].classList.add("faded-in");
 	} else {
+		buildingList[target].classList.remove("faded-in");
 		buildingList[target].style.display = 'none';
 	}
 }
@@ -47,7 +49,7 @@ function loadBuilding(e) {
 /* Get the elements we'll need for show/hide of video */
 function videoSetup() {
 	videoButton = document.getElementById("videobutton");
-	videoElement = document.getElementById("gropiusdoc");
+	videoElement = document.getElementById("gropius-doc");
 	/* Default to hiding the video */
 	videoElement.style.display = 'none';
 	videoButton.addEventListener('click', toggleShowVideo);
@@ -60,9 +62,13 @@ function toggleShowVideo(e) {
 	var disp = videoElement.style.display;
 	if (disp == 'none' || disp == '') {
 		videoElement.style.display = 'block';
+		setTimeout(videoElement.classList.toggle("hidden"), 5);
 		videoButton.innerHTML = 'Hide';
 	} else {
-		videoElement.style.display = 'none';
+		videoElement.classList.toggle("hidden");
+		setTimeout(() => {
+			videoElement.style.display = 'none';
+		}, 1005);
 		videoButton.innerHTML = 'Show';
 		videoElement.load();
 	}

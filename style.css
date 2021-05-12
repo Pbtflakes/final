@@ -23,7 +23,7 @@
 		color: white;
 	}
 
-	button:hover {
+	button:hover, button:focus {
 		color: #ce1126;
 		background-color: white;
 	}
@@ -43,9 +43,29 @@
 		clear: both;
 	}
 
+	video[id="gropius-doc"] {
+		height: 480px;
+		width: 640px;
+		transition: height 1s;
+	}
+
+	video[id="gropius-doc"].hidden {
+	}
+
 	div.building {
 		display: none;
 	}
+	/*
+		opacity: 0;
+		transition: opacity 0.5s, visibility 200ms;
+		transition-delay: 0.1s;
+	}
+
+	div.faded-in {
+		transition: opacity 0.5s, visibility 200ms;
+		opacity: 1;
+	}
+	*/
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: sans-serif;
@@ -76,6 +96,7 @@
 		text-decoration: none;
 		padding: 3px;
 		display: inline-block;
+		transition: background-color 100ms;
 	}
 
 	li > a:link, li > a:visited {
@@ -162,20 +183,6 @@
 
 	span:lang(de) {
 		font-style: italic;
-	}
-
-	svg.logo {
-		font: bold 50px sans-serif;
-		height: 60px;
-	}
-
-	text.logo {
-		font-variant: small-caps;
-		fill: white;
-		stroke: #ce1126;
-		stroke-width: 4px;
-		stroke-linejoin: miter;
-		paint-order: stroke;
 	}
 
 	input, textarea {

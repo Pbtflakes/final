@@ -1,0 +1,18 @@
+<svg version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 450 50"
+     height="60px">
+  <text y="45"
+        font-weight="bold"
+        font-family="sans-serif"
+        font-variant="small-caps"
+        font-size="50px"
+        fill="white"
+        stroke="#ce1126"
+        stroke-width="4px"
+        stroke-linejoin="miter"
+        paint-order="stroke">
+  Bauhaus History
+  </text>
+</svg>

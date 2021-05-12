@@ -81,7 +81,8 @@
             <div class="videobox">
               <button id="videobutton">Show</button>
               <video 
-                     id=gropiusdoc
+                     id=gropius-doc
+                     class="hidden"
                      controls
                      title="Walter Gropius: His New World Home"
                      poster="img/gropius-doc-thumb.jpg">

@@ -1,9 +1,7 @@
 <div class="colorbox">
   <header>
     <a href="index.php">
-      <svg class=logo viewBox="0 0 450 50">
-        <text class=logo y=45>Bauhaus History</text>
-      </svg>
+      <object type="image/svg+xml" data="logo.svg"></object>
     </a>
   </header>
   <nav>
