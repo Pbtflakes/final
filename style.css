@@ -1,3 +1,9 @@
+@media (prefers-reduced-motion) {
+	* {
+		transition-duration: 0s !important;
+	}
+}
+
 @media screen {
 	main p:first-child::first-line, main dd::first-line {
 		font-variant: small-caps;
@@ -21,9 +27,10 @@
 		font-size: 16pt;
 		background-color: #ce1126;
 		color: white;
+		transition: background-color 100ms;
 	}
 
-	button:hover, button:focus {
+	button:hover {
 		color: #ce1126;
 		background-color: white;
 	}
@@ -46,10 +53,14 @@
 	video[id="gropius-doc"] {
 		height: 480px;
 		width: 640px;
-		transition: height 1s;
+		max-height: 480px;
+		max-width: 640px;
+		transition: height 0.5s, width 0.5s;
 	}
 
 	video[id="gropius-doc"].hidden {
+		height: 0px;
+		width: 0px;
 	}
 
 	div.building {
