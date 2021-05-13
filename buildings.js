@@ -51,7 +51,7 @@ function videoSetup() {
 	videoButton = document.getElementById("videobutton");
 	videoElement = document.getElementById("gropius-doc");
 	/* Default to hiding the video */
-	videoElement.style.display = 'none';
+	videoElement.style.visibility = "hidden";
 	videoButton.addEventListener('click', toggleShowVideo);
 }
 
@@ -59,17 +59,16 @@ function videoSetup() {
 versa for while the video is hidden.  We also toggle the text shown
 in the button. */
 function toggleShowVideo(e) {
-	var disp = videoElement.style.display;
-	if (disp == 'none' || disp == '') {
-		videoElement.style.display = 'block';
-		setTimeout(videoElement.classList.toggle("hidden"), 5);
+	var vis = videoElement.style.visibility;
+	if (vis == 'hidden' || vis == '') {
+		videoElement.style.visibility = 'visible';
+		videoElement.classList.toggle("hidden");
 		videoButton.innerHTML = 'Hide';
 	} else {
 		videoElement.classList.toggle("hidden");
 		setTimeout(() => {
-			videoElement.style.display = 'none';
-		}, 1005);
+			videoElement.style.visibility = "hidden";
+		}, 1000);
 		videoButton.innerHTML = 'Show';
-		videoElement.load();
 	}
 }
