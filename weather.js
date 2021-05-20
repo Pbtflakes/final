@@ -17,8 +17,8 @@ async function processWX() {
 	let windMPH = 0.6214 * wxProp.windSpeed.value;
 	/* Assemble the contents of our report into string form */
 	let wxParts = [wxProp.textDescription,
-		'<br>Temp: ', tempF.toFixed(),
-		'&deg;F<br>Wind: ', windMPH.toFixed(),
+		'<br><i>Temp</i>: ', tempF.toFixed(),
+		'&deg;F<br><i>Wind</i>: ', windMPH.toFixed(),
 		' MPH'];
 	/* Reduce it all together into one, place into DOM */
 	let wxStr = wxParts.reduce((a, b) => a.concat(b));

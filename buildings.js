@@ -39,9 +39,7 @@ function loadBuilding(e) {
 	var targetStyle = buildingList[target].style.display;
 	if (targetStyle == 'none' || targetStyle == '') {
 		buildingList[target].style.display = 'block';
-		buildingList[target].classList.add("faded-in");
 	} else {
-		buildingList[target].classList.remove("faded-in");
 		buildingList[target].style.display = 'none';
 	}
 }
@@ -50,25 +48,19 @@ function loadBuilding(e) {
 function videoSetup() {
 	videoButton = document.getElementById("videobutton");
 	videoElement = document.getElementById("gropius-doc");
-	/* Default to hiding the video */
-	videoElement.style.visibility = "hidden";
 	videoButton.addEventListener('click', toggleShowVideo);
 }
 
 /* If we click the button while the video is shown, hide it; vice
-versa for while the video is hidden.  We also toggle the text shown
-in the button. */
+versa for while the video is hidden.  We also toggle the text
+shown in the button.  Hiding is now done purely with Javascript,
+since we can't do transitions while switching display modes. */
 function toggleShowVideo(e) {
-	var vis = videoElement.style.visibility;
-	if (vis == 'hidden' || vis == '') {
-		videoElement.style.visibility = 'visible';
+	if (videoElement.classList.contains("hidden")) {
 		videoElement.classList.toggle("hidden");
 		videoButton.innerHTML = 'Hide';
 	} else {
 		videoElement.classList.toggle("hidden");
-		setTimeout(() => {
-			videoElement.style.visibility = "hidden";
-		}, 1000);
 		videoButton.innerHTML = 'Show';
 	}
 }

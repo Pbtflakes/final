@@ -1,6 +1,6 @@
 <?php
 $dsn = 'mysql:host=localhost;dbname=comments_db';
-$username = 'comment_user';
+$username = 'pubuser';
 $password = 'pa55word';
 try {
   $db = new PDO($dsn, $username, $password);

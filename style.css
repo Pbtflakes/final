@@ -13,6 +13,10 @@
 		font-variant: normal;
 	}
 
+  p#wxreport {
+    font-size: 24px;
+  }
+
 	dd > p {
 		margin: 0;
 	}
@@ -66,17 +70,6 @@
 	div.building {
 		display: none;
 	}
-	/*
-		opacity: 0;
-		transition: opacity 0.5s, visibility 200ms;
-		transition-delay: 0.1s;
-	}
-
-	div.faded-in {
-		transition: opacity 0.5s, visibility 200ms;
-		opacity: 1;
-	}
-	*/
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: sans-serif;
@@ -248,9 +241,15 @@
 	body {
 		max-width: 800px;
 	}
+  div#osm {
+    float: right;
+  }
 	h2 {
 		clear: both;
 	}
+  h2#wx {
+    clear: none;
+  }
 
 	figure.wideleft > img {
 		max-width: 250px;
